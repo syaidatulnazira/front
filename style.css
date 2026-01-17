@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-section {
+    background-image: url('https://images.unsplash.com/photo-1564349683136-77e08bef1ef1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.content-center {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.logo-box img {
+    filter: brightness(0) invert(1); 
+    margin-bottom: 10px;
+}
+
+.logo-box h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+.logo-box p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.search-wrapper {
+    display: flex;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.search-wrapper input {
+    flex: 1;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.search-wrapper button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-wrapper button:hover {
+    background: #333;
+}
+
+.quick-links {
+    margin-top: 25px;
+}
+
+.quick-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+}
+
+.quick-links a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
