@@ -1,44 +1,43 @@
+<!DOCTYPE html>
 <html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Datang ke Wikipedia WWF</title>
+    <title>Wikipedia WWF - Muka Depan</title>
     <link rel="stylesheet" href="home-style.css">
 </head>
 <body>
 
-    <div class="hero-section">
-        <div class="overlay"></div>
+    <div class="hero-container">
+        <div class="dark-overlay"></div>
 
-        <div class="content-center">
-            <div class="logo-box">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/24/WWF_logo.svg/100px-WWF_logo.svg.png" alt="WWF Logo">
+        <div class="center-content">
+            <div class="brand-section">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/24/WWF_logo.svg/120px-WWF_logo.svg.png" alt="WWF Logo" class="main-logo">
                 <h1>WIKIPEDIA</h1>
                 <p>Ensiklopedia Bebas Alam Sekitar</p>
             </div>
 
-            <div class="search-wrapper">
-                <input type="text" id="mainSearch" placeholder="Cari spesies atau topik pemuliharaan...">
-                <button onclick="pergiKeArtikel()">Cari</button>
+            <div class="main-search-bar">
+                <input type="text" id="userInput" placeholder="Cari tentang WWF, Harimau, atau Konservasi...">
+                <button onclick="prosesCarian()">Cari</button>
             </div>
 
-            <div class="quick-links">
-                <a href="index.html">Terus ke Rencana WWF</a>
-                <a href="#">Harimau</a>
-                <a href="#">Panda</a>
-                <a href="#">Gajah</a>
+            <div class="navigation-hints">
+                <a href="index.html">Buka Rencana Penuh WWF</a>
+                <span>|</span>
+                <a href="#">Spesies Terancam</a>
             </div>
         </div>
     </div>
 
     <script>
-        function pergiKeArtikel() {
-            const input = document.getElementById('mainSearch').value.toLowerCase();
-            // Jika user cari "wwf", kita hantar ke index.html
-            if(input.includes("wwf") || input === "") {
+        function prosesCarian() {
+            const carian = document.getElementById('userInput').value.toLowerCase();
+            if (carian.includes("wwf") || carian === "") {
                 window.location.href = "index.html";
             } else {
-                alert("Rencana untuk '" + input + "' sedang dikemaskini. Sila cari 'WWF'.");
+                alert("Keputusan untuk '" + carian + "' akan dipaparkan tidak lama lagi. Sila cuba cari 'WWF'.");
             }
         }
     </script>
